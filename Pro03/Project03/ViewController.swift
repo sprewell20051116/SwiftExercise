@@ -32,10 +32,15 @@ class ViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell");
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
-        cell.textLabel?.text = dataArray[indexPath.row];
-        return cell;
+
+        var cell:UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("Cell");
+        if (cell == nil) {
+            cell = UITableViewCell(style:UITableViewCellStyle.Subtitle, reuseIdentifier:"Cell");
+        }
+        
+        cell!.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
+        cell!.textLabel?.text = dataArray[indexPath.row];
+        return cell!;
     }
 
 

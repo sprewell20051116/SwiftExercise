@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var editBtn: UIBarButtonItem!
@@ -24,12 +24,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         editBtn.target = self;
         editBtn.action = #selector(editBtnClicked(_:));
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -66,6 +64,18 @@ class ViewController: UIViewController {
         
         dataArray.removeAtIndex(indexPath.row);
         tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade);
+        
+    }
+    
+    // [Casper] canMoveRowAtIndexPath and moveRowAtIndexPath should both implement to active reorder function
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true;
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+        let itemToMove = dataArray[fromIndexPath.row]
+        dataArray.removeAtIndex(fromIndexPath.row)
+        dataArray.insert(itemToMove, atIndex: toIndexPath.row)
         
     }
     

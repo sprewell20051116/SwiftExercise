@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project06" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pp5-kh-mqf">
+                                <rect key="frame" x="20" y="66" width="560" height="110"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="96"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="v2J-Cp-LoH"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TipResult" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySi-gu-un9">
+                                <rect key="frame" x="514.5" y="184" width="65.5" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalResult" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT5-8z-Msn">
+                                <rect key="frame" x="503" y="213" width="77" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ShQ-yV-2F8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="4jA-NW-82x"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="mNC-YM-GdR"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TipLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXg-Dl-dQg">
+                                <rect key="frame" x="20" y="184" width="59" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalLabe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D6-g5-ohl">
+                                <rect key="frame" x="20" y="213" width="66" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-Uh-80R">
+                                <rect key="frame" x="18" y="241" width="564" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MLb-xW-AMr"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ShQ-yV-2F8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="10B-8x-alc"/>
+                            <constraint firstItem="9D6-g5-ohl" firstAttribute="centerY" secondItem="fT5-8z-Msn" secondAttribute="centerY" id="9aq-Ax-q9j"/>
+                            <constraint firstItem="Pp5-kh-mqf" firstAttribute="top" secondItem="ShQ-yV-2F8" secondAttribute="bottom" id="Fjy-0Z-tJX"/>
+                            <constraint firstItem="lVN-Uh-80R" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NAr-ON-Q2t"/>
+                            <constraint firstItem="lVN-Uh-80R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pgy-cw-BUg"/>
+                            <constraint firstItem="fT5-8z-Msn" firstAttribute="top" secondItem="ySi-gu-un9" secondAttribute="bottom" constant="9" id="Pnh-kJ-M1T"/>
+                            <constraint firstItem="pXg-Dl-dQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RsU-QQ-byE"/>
+                            <constraint firstItem="pXg-Dl-dQg" firstAttribute="centerY" secondItem="ySi-gu-un9" secondAttribute="centerY" id="bYn-wd-Zpr"/>
+                            <constraint firstItem="fT5-8z-Msn" firstAttribute="trailing" secondItem="ySi-gu-un9" secondAttribute="trailing" id="bu7-U6-e4u"/>
+                            <constraint firstItem="ySi-gu-un9" firstAttribute="top" secondItem="Pp5-kh-mqf" secondAttribute="bottom" constant="8" id="d4f-oC-MwO"/>
+                            <constraint firstItem="Pp5-kh-mqf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="dfg-vU-HpG"/>
+                            <constraint firstItem="ySi-gu-un9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ej8-3g-nu0"/>
+                            <constraint firstAttribute="trailing" secondItem="Pp5-kh-mqf" secondAttribute="trailing" constant="20" id="oR6-0v-DFc"/>
+                            <constraint firstItem="lVN-Uh-80R" firstAttribute="top" secondItem="9D6-g5-ohl" secondAttribute="bottom" constant="8" id="oua-a0-bzl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ShQ-yV-2F8" secondAttribute="trailing" constant="-20" id="pCq-cm-4Ro"/>
+                            <constraint firstItem="9D6-g5-ohl" firstAttribute="leading" secondItem="pXg-Dl-dQg" secondAttribute="leading" id="qOl-Gg-mBg"/>
+                            <constraint firstItem="Pp5-kh-mqf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="u7q-dJ-CgT"/>
+                            <constraint firstItem="ShQ-yV-2F8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="zj9-1x-70b"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="u7q-dJ-CgT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="Pp5-kh-mqf" id="e4s-qJ-Gpt"/>
+                        <outlet property="slider" destination="lVN-Uh-80R" id="g2S-TJ-DGf"/>
+                        <outlet property="tipLab" destination="pXg-Dl-dQg" id="clQ-t8-pQw"/>
+                        <outlet property="tipResultLab" destination="ySi-gu-un9" id="YtM-Qi-hDm"/>
+                        <outlet property="totalLab" destination="9D6-g5-ohl" id="sWp-dQ-zyd"/>
+                        <outlet property="totalResultLab" destination="fT5-8z-Msn" id="kKN-5Y-axE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="389"/>
+        </scene>
+    </scenes>
+</document>

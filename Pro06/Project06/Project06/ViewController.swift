@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet var totalLab: UILabel!
     @IBOutlet var totalResultLab: UILabel!
     @IBOutlet var slider: UISlider!
+    @IBOutlet var keyboardToolbar: UIToolbar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class ViewController: UIViewController {
 
     @IBAction func sliderValueChanged(sender: UISlider) {
         setLabs();
+
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -55,21 +58,36 @@ class ViewController: UIViewController {
     }
     
     // MARK: Private methods
+
     func initUI() {
         tipLab.text = "Tip (\(defaultTip * 100)%) : ";
         totalLab.text = "Total : ";
         tipResultLab.text = "$0.00";
         totalResultLab.text = "$0.00";
         slider.value = defaultTip;
+        
+        numberTextField.inputAccessoryView = keyboardToolbar;
     }
     
     func setLabs() {
+        if let numberInt = Float(self.numberTextField.text!) {
+            
+            print(numberInt);
+            tipResultLab.text = "$\(slider.value * numberInt)";
+            totalResultLab.text = "$\(numberInt + (slider.value * numberInt))";
+
+        } else {
+            print("textField is not number");
+        }
+        
         tipLab.text = "Tip (\(slider.value * 100)%) : ";
         totalLab.text = "Total : ";
-        tipResultLab.text = "$0.00";
-        totalResultLab.text = "$0.00";
+        
     }
 
+    @IBAction func keyboarDoneBtnClicked(sender: AnyObject) {
+        numberTextField.resignFirstResponder();
+    }
     
 }
 

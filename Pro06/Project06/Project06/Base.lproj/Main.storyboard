@@ -19,22 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pp5-kh-mqf">
-                                <rect key="frame" x="20" y="66" width="560" height="110"/>
+                                <rect key="frame" x="20" y="66" width="560" height="117"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="96"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="96"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="v2J-Cp-LoH"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TipResult" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySi-gu-un9">
-                                <rect key="frame" x="514.5" y="184" width="65.5" height="20"/>
+                                <rect key="frame" x="514.5" y="191" width="65.5" height="20"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalResult" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT5-8z-Msn">
-                                <rect key="frame" x="503" y="213" width="77" height="20"/>
+                                <rect key="frame" x="503" y="220" width="77" height="20"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -49,19 +49,19 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TipLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXg-Dl-dQg">
-                                <rect key="frame" x="20" y="184" width="59" height="20"/>
+                                <rect key="frame" x="20" y="191" width="59" height="20"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalLabe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D6-g5-ohl">
-                                <rect key="frame" x="20" y="213" width="66" height="20"/>
+                                <rect key="frame" x="20" y="220" width="66" height="20"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-Uh-80R">
-                                <rect key="frame" x="18" y="241" width="564" height="31"/>
+                                <rect key="frame" x="18" y="248" width="564" height="31"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MLb-xW-AMr"/>
                                 </connections>
@@ -95,6 +95,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="keyboardToolbar" destination="Lax-t3-evf" id="D5t-T0-OJp"/>
                         <outlet property="numberTextField" destination="Pp5-kh-mqf" id="e4s-qJ-Gpt"/>
                         <outlet property="slider" destination="lVN-Uh-80R" id="g2S-TJ-DGf"/>
                         <outlet property="tipLab" destination="pXg-Dl-dQg" id="clQ-t8-pQw"/>
@@ -104,6 +105,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Lax-t3-evf">
+                    <rect key="frame" x="0.0" y="0.0" width="596" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ZTa-rm-rkW"/>
+                        <barButtonItem systemItem="done" id="JUi-3b-pbP">
+                            <connections>
+                                <action selector="keyboarDoneBtnClicked:" destination="BYZ-38-t0r" id="2Vw-DZ-RLz"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="284" y="389"/>
         </scene>

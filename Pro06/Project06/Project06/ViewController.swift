@@ -86,7 +86,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func keyboarDoneBtnClicked(sender: AnyObject) {
+        
+        //
+        // Casper Note 
+        // optional is really pain in my ass
+        //
         numberTextField.resignFirstResponder();
+        if numberTextField.text?.characters.count != 0 {
+            numberTextField.text = "$\(numberTextField.text!)";
+        }
+    
     }
     
 }

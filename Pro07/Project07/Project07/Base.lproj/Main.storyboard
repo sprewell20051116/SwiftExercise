@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vru-G7-IGF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vru-G7-IGF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,22 +20,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6d3-Fb-hgZ">
-                                <rect key="frame" x="20" y="0.0" width="560" height="120"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6d3-Fb-hgZ">
+                                <rect key="frame" x="25" y="5" width="560" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="0ic-Ue-KcX"/>
+                                    <constraint firstAttribute="height" priority="500" constant="120" id="0ic-Ue-KcX"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">臣亮言：先帝創業未半，而中道崩殂；今天下三分，益州疲敝，此誠危急存亡之秋也。然侍衛之臣，不懈于內；忠志之士，忘身于外者：蓋追先帝之殊遇，欲報之于陛下也。誠宜開張圣听，以光先帝遺德，恢弘志士之气；不宜妄自菲薄，引喻失義，以塞忠諫之路也。宮中府中，俱為一体；陟罰臧否，不宜异同：若有作奸犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外异法也。侍中、侍郎郭攸之、費依、董允等，此皆良實，志慮忠純，是以先帝簡拔以遺陛下：愚以為宮中之事，事無大小，悉以咨之，然后施行，必得裨補闕漏，有所廣益。將軍向寵，性行淑均，曉暢軍事，試用之于昔日，先帝稱之曰“能”，是以眾議舉寵為督：愚以為營中之事，事無大小，悉以咨之，必能使行陣和穆，优劣得所也。親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，此后漢所以傾頹也。</string>
                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="e70-Mw-pTc"/>
                                 </connections>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rFc-3u-XlP">
-                                <rect key="frame" x="150" y="164" width="300" height="300"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFc-3u-XlP">
+                                <rect key="frame" x="150" y="249" width="300" height="300"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.94117647059999998" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rFc-3u-XlP" secondAttribute="height" multiplier="1:1" id="nNN-LQ-1ka"/>
@@ -45,16 +45,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6d3-Fb-hgZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2Na-yU-iU3"/>
+                            <constraint firstItem="6d3-Fb-hgZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="6g3-ro-F0E"/>
                             <constraint firstItem="6d3-Fb-hgZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VKR-ft-h9U"/>
+                            <constraint firstItem="6d3-Fb-hgZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="WJE-6N-kdu"/>
                             <constraint firstItem="rFc-3u-XlP" firstAttribute="top" secondItem="6d3-Fb-hgZ" secondAttribute="bottom" constant="44" id="ira-TJ-ND5"/>
                             <constraint firstItem="6d3-Fb-hgZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="lNd-0a-MUg"/>
+                            <constraint firstItem="6d3-Fb-hgZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="5" id="lvr-Yt-e92"/>
                             <constraint firstItem="rFc-3u-XlP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="obf-cc-bRe"/>
                             <constraint firstItem="rFc-3u-XlP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="sCG-Cx-9Ky"/>
                             <constraint firstAttribute="trailing" secondItem="6d3-Fb-hgZ" secondAttribute="trailing" constant="20" id="vVf-8D-pml"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="2Na-yU-iU3"/>
                                 <exclude reference="VKR-ft-h9U"/>
+                                <exclude reference="lNd-0a-MUg"/>
+                                <exclude reference="vVf-8D-pml"/>
                             </mask>
                         </variation>
                     </view>

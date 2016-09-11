@@ -17,10 +17,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.init_textView();
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewDidAppear(animated: Bool) {
+    
+        super.viewDidAppear(animated);
+        self.init_textView();
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,16 +37,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func setTextViewBound() {
         
-        let contentSize:CGSize = textView.sizeThatFits(textView.bounds.size);
-        var frame = self.textView.frame
-        frame.size.height = contentSize.height
-        self.textView.frame = frame
-
-        print(contentSize);
-//        let descriptionSize : CGSize = textView.contentSize;
-//        print(textView.contentSize);
-//        print(textViewHeightConstraint);
-        textViewHeightConstraint.constant = contentSize.height;
+        var bountSize : CGSize = textView.bounds.size;
+        bountSize.width = self.view.frame.size.width - 10;
+        bountSize.height = self.view.frame.size.height;
+        print(bountSize.width);
+        
+        let contentSize:CGSize = textView.sizeThatFits(CGSizeMake(200.0, 200.0));
+        
+        
+        let insets: UIEdgeInsets = textView.textContainerInset;	
+        print(insets)
+        textViewHeightConstraint.constant = textView.contentSize.height + insets.top + insets.bottom;
         print(textViewHeightConstraint);
     }
     

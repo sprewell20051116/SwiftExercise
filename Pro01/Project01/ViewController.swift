@@ -25,10 +25,12 @@ class ViewController: UIViewController {
         countLab.text = "0";
     }
     
-    @IBAction func tapToAddBtnClicked(sender: AnyObject) {
-        if let countInt = Int(self.countLab.text!) {
-            print(countInt);
-            countLab.text = String(countInt + 1);
-        }
-    }
+    
+    
+//    @IBAction func tapToAddBtnClicked(sender: AnyObject) {
+//        if let countInt = Int(self.countLab.text!) {
+//            print(countInt);
+//            countLab.text = String(countInt + 1);
+//        }
+//    }
 }

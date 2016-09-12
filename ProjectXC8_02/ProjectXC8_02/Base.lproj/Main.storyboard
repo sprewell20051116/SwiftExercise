@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjectXC8_02" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxB-Uc-FVB">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="o9h-Lt-5e2"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Project 02" id="YNl-V9-n0A">
+                                        <barButtonItem key="leftBarButtonItem" title="Reset" id="wdu-9A-9sf"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyF-6t-RQn">
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7A-hj-VkA">
+                                <state key="normal" title="Hold Here"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V7A-hj-VkA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0lC-tG-pjn"/>
+                            <constraint firstItem="DyF-6t-RQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1m0-A6-jKD"/>
+                            <constraint firstItem="V7A-hj-VkA" firstAttribute="top" secondItem="DyF-6t-RQn" secondAttribute="bottom" constant="50" id="9VS-23-Cys"/>
+                            <constraint firstItem="DyF-6t-RQn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PyK-Mc-fdZ"/>
+                            <constraint firstItem="PxB-Uc-FVB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qta-Kx-xY0"/>
+                            <constraint firstItem="PxB-Uc-FVB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mTC-7L-UJz"/>
+                            <constraint firstAttribute="trailing" secondItem="PxB-Uc-FVB" secondAttribute="trailing" id="s2H-P2-Xe4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countLab" destination="DyF-6t-RQn" id="j9s-eh-UKN"/>
+                        <outlet property="holdHereBtn" destination="V7A-hj-VkA" id="3SU-g1-Whu"/>
+                        <outlet property="resetBtn" destination="wdu-9A-9sf" id="3my-y1-e5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

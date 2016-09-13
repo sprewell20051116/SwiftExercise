@@ -1,33 +1,24 @@
 //
 //  ViewController.swift
-//  ProjectXC8_04
+//  ProjectXC8_05
 //
-//  Created by GIGIGUN on 9/12/16.
+//  Created by GIGIGUN on 9/13/16.
 //  Copyright © 2016 GIGIGUN. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var dataArray: [String] = ["Apple", "Apricot", "Banana", "Blueberry", "Cantaloupe", "Cherry",
                                "Clementine", "Coconut", "Cranberry", "Fig", "Grape", "Grapefruit",
                                "Kiwi fruit", "Lemon", "Lime", "Lychee", "Mandarine", "Mango",
                                "Melon", "Nectarine", "Olive", "Orange", "Papaya", "Peach",
                                "Pear", "Pineapple", "Raspberry", "Strawberry"];
-    
-    
-    @IBOutlet var tableView: UITableView!
-    
-    @IBOutlet var addBtn: UIBarButtonItem!
-    @IBOutlet var editBtn: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        addBtn.target = self;
-        addBtn.action = #selector(addBtnClicked);
-        editBtn.target = self;
-        editBtn.action = #selector(editBtnClicked);
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,33 +44,7 @@ class ViewController: UIViewController {
         
         return cell
     }
-    
-    // MARK: bar button action
-    func addBtnClicked(sender : Any) {
-        print(#function);
-    }
-    
-    func editBtnClicked(sender : Any) {
-        tableView.setEditing(!tableView.isEditing, animated: true);
-    }
-    
-    func tableView(_ tableView: UITableView,
-                   editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle
-    {
-        return .delete;
-    }
-    
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true;
-    }
-    
-    func tableView(_ tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath,
-                   toIndexPath destinationIndexPath: NSIndexPath)
-    {
-        let itemToMove = dataArray[sourceIndexPath.row];
-        dataArray.remove(at: sourceIndexPath.row);
-        dataArray.insert(itemToMove, at: destinationIndexPath.row);
-    }
-    
+
+
 }
 

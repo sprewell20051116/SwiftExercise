@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     public func textFieldDidEndEditing(_ textField: UITextField)
     {
         if (0 != textField.text?.characters.count) {
-            numberTextField.text = "$ \(textField.text!)";
+            numberTextField.text = "$ \(textField.text!).00";
         }
     }
 

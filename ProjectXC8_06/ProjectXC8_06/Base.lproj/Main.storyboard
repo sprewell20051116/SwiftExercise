@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjectXC8_06" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$ 0.0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clE-7I-Kov">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="UEZ-hd-hrG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xGb-bj-FVY"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIG-GE-UaL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDQ-Cr-u9x">
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip (15%)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nq-1e-82x">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TW-gx-nEP">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lid-E9-dkC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="eYi-VD-WtO"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Project 06" id="3XM-2Z-Dpt"/>
+                                </items>
+                            </navigationBar>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="G84-ko-c1c">
+                                <frame key="frameInset" minX="14" minY="213" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="slideValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tot-Ij-aT4"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iIG-GE-UaL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0LJ-fJ-ftX"/>
+                            <constraint firstItem="clE-7I-Kov" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="16t-5A-hmt"/>
+                            <constraint firstItem="clE-7I-Kov" firstAttribute="top" secondItem="Lid-E9-dkC" secondAttribute="bottom" constant="10" id="2Le-NO-fiN"/>
+                            <constraint firstItem="6TW-gx-nEP" firstAttribute="trailing" secondItem="3Nq-1e-82x" secondAttribute="trailing" id="3XA-qm-DyK"/>
+                            <constraint firstItem="6TW-gx-nEP" firstAttribute="baseline" secondItem="kDQ-Cr-u9x" secondAttribute="baseline" id="ASP-2y-3l4"/>
+                            <constraint firstItem="clE-7I-Kov" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DNJ-xS-ftq"/>
+                            <constraint firstItem="Lid-E9-dkC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rfj-Kt-rmO"/>
+                            <constraint firstItem="3Nq-1e-82x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="bM9-h2-ihB"/>
+                            <constraint firstItem="Lid-E9-dkC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bT6-zv-zAT"/>
+                            <constraint firstAttribute="trailing" secondItem="Lid-E9-dkC" secondAttribute="trailing" id="dAu-67-iSL"/>
+                            <constraint firstItem="kDQ-Cr-u9x" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="enf-OT-MIW"/>
+                            <constraint firstItem="iIG-GE-UaL" firstAttribute="top" secondItem="clE-7I-Kov" secondAttribute="bottom" id="flQ-Mm-L6o"/>
+                            <constraint firstItem="3Nq-1e-82x" firstAttribute="top" secondItem="clE-7I-Kov" secondAttribute="bottom" id="t95-tk-ezc"/>
+                            <constraint firstItem="kDQ-Cr-u9x" firstAttribute="top" secondItem="iIG-GE-UaL" secondAttribute="bottom" id="xKl-aB-M6g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="clE-7I-Kov" id="Th7-Ja-MLe"/>
+                        <outlet property="slider" destination="G84-ko-c1c" id="G5d-HU-AmH"/>
+                        <outlet property="tipPercentLab" destination="3Nq-1e-82x" id="uXz-sZ-gKe"/>
+                        <outlet property="tipResultLab" destination="iIG-GE-UaL" id="Pae-8V-ORR"/>
+                        <outlet property="toolbar" destination="TAg-7j-diZ" id="38B-v0-JYl"/>
+                        <outlet property="totalResultLab" destination="kDQ-Cr-u9x" id="gIx-Bp-YnB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="TAg-7j-diZ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="nAH-78-UAh"/>
+                        <barButtonItem title="Done" id="v3T-PF-fLz">
+                            <connections>
+                                <action selector="doneBtnClicked:" destination="BYZ-38-t0r" id="Tty-D8-Bnb"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>

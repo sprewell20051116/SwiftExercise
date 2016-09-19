@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         cell.textLabel?.text = dataArray[indexPath.row];
         return cell;
     }
+    
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int
     {

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pxD-fX-TOG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Project 08-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjectXC8_08" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-K4-6uH">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CusomizeCell" rowHeight="98" id="aBX-8O-TES" customClass="baseTableViewCell" customModule="ProjectXC8_08" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aBX-8O-TES" id="vHd-b5-N7D">
+                                            <frame key="frameInset" width="375" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cha00" translatesAutoresizingMaskIntoConstraints="NO" id="AkW-i1-SFY">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Ju4-WP-vS7"/>
+                                                        <constraint firstAttribute="height" constant="80" id="v4o-U1-3cq"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="November 16, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0q-h2-z9u">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0h-Rt-Mf5">
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l0q-h2-z9u" firstAttribute="top" secondItem="vHd-b5-N7D" secondAttribute="topMargin" id="2Jj-35-3Hs"/>
+                                                <constraint firstItem="l0q-h2-z9u" firstAttribute="trailing" secondItem="vHd-b5-N7D" secondAttribute="trailingMargin" id="Gmd-c3-LW6"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Q0h-Rt-Mf5" secondAttribute="bottom" constant="10" id="RiZ-H0-zKq"/>
+                                                <constraint firstItem="AkW-i1-SFY" firstAttribute="leading" secondItem="vHd-b5-N7D" secondAttribute="leadingMargin" id="gCc-Wb-EaP"/>
+                                                <constraint firstItem="l0q-h2-z9u" firstAttribute="leading" secondItem="AkW-i1-SFY" secondAttribute="trailing" constant="8" id="pkU-U4-S3j"/>
+                                                <constraint firstItem="Q0h-Rt-Mf5" firstAttribute="leading" secondItem="AkW-i1-SFY" secondAttribute="trailing" constant="8" id="qWT-Ey-2mE"/>
+                                                <constraint firstItem="Q0h-Rt-Mf5" firstAttribute="top" secondItem="l0q-h2-z9u" secondAttribute="bottom" constant="8" id="tky-uk-IgV"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="AkW-i1-SFY" secondAttribute="bottom" priority="750" constant="10" id="xeS-Gq-5XL"/>
+                                                <constraint firstItem="Q0h-Rt-Mf5" firstAttribute="trailing" secondItem="vHd-b5-N7D" secondAttribute="trailingMargin" id="ybh-3B-ZQk"/>
+                                                <constraint firstItem="AkW-i1-SFY" firstAttribute="top" secondItem="vHd-b5-N7D" secondAttribute="topMargin" id="zqU-b6-6ys"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLab" destination="Q0h-Rt-Mf5" id="mfh-Py-IuT"/>
+                                            <outlet property="timeLab" destination="l0q-h2-z9u" id="uiO-PC-YaT"/>
+                                            <outlet property="titleImageView" destination="AkW-i1-SFY" id="8XT-42-DT6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="98" id="TXo-cK-Kxt" customClass="baseTableViewCell" customModule="ProjectXC8_08" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="190" width="375" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TXo-cK-Kxt" id="vxc-6X-3oI">
+                                            <frame key="frameInset" width="375" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="eEi-Z2-i9g"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jmH-2K-vo6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oM4-K4-6uH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LWY-XN-vbi"/>
+                            <constraint firstItem="oM4-K4-6uH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QG4-4y-oLZ"/>
+                            <constraint firstAttribute="trailing" secondItem="oM4-K4-6uH" secondAttribute="trailing" id="axM-n4-663"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oM4-K4-6uH" secondAttribute="bottom" id="bK9-y7-nno"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Project 08" id="YX8-LX-8tl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5ok-6n-Nzc">
+                            <color key="tintColor" red="0.27450980390000002" green="0.7843137255" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="TableView" destination="oM4-K4-6uH" id="PDT-oN-47J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.6" y="790.25487256371821"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WdO-gt-p4c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pxD-fX-TOG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I5j-GX-baD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nim-li-DXQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQ3-ts-VuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="791.15442278860576"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cha00" width="80" height="80"/>
+    </resources>
+</document>

@@ -20,7 +20,6 @@ class baseTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.titleImageView.layer.masksToBounds = true;
         self.titleImageView.layer.cornerRadius = 5;
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

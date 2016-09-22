@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         TableView.rowHeight = UITableViewAutomaticDimension;
         TableView.estimatedRowHeight = 300;
         // Do any additional setup after loading the view, typically from a nib.
+        
+        testForCoredata();
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +53,14 @@ class ViewController: UIViewController {
         let detailedPage : DetailedViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailedViewController") as! DetailedViewController;
         self.present(detailedPage, animated: true, completion: nil);
 
+    }
+
+    
+    // MARK: - CoreData
+    func testForCoredata() {
+        let coreData = CoreDataModel();
+//        coreData.saveObj();
+        coreData.readObj();
     }
 
 

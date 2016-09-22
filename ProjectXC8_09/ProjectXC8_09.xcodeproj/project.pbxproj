@@ -14,8 +14,8 @@
 		1072418B1D9175BA00555E07 /* ProjectXC8_09.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 107241891D9175BA00555E07 /* ProjectXC8_09.xcdatamodeld */; };
 		1072418D1D9175BA00555E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1072418C1D9175BA00555E07 /* Assets.xcassets */; };
 		107241901D9175BA00555E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1072418E1D9175BA00555E07 /* LaunchScreen.storyboard */; };
-		107241981D91762700555E07 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107241971D91762700555E07 /* CoreDataModel.swift */; };
 		1072419A1D91796C00555E07 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107241991D91796C00555E07 /* BaseTableViewCell.swift */; };
+		10EC05A71D942D1600211F62 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EC05A61D942D1600211F62 /* CoreDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		1072418C1D9175BA00555E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1072418F1D9175BA00555E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		107241911D9175BA00555E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		107241971D91762700555E07 /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		107241991D91796C00555E07 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		10EC05A61D942D1600211F62 /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataModel.swift; path = ../CoreDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +62,9 @@
 		107241811D9175BA00555E07 /* ProjectXC8_09 */ = {
 			isa = PBXGroup;
 			children = (
+				10EC05A61D942D1600211F62 /* CoreDataModel.swift */,
 				107241821D9175BA00555E07 /* AppDelegate.swift */,
 				107241841D9175BA00555E07 /* ViewController.swift */,
-				107241971D91762700555E07 /* CoreDataModel.swift */,
 				101F8B391D91803400250580 /* DetailedViewController.swift */,
 				107241991D91796C00555E07 /* BaseTableViewCell.swift */,
 				107241861D9175BA00555E07 /* Main.storyboard */,
@@ -149,10 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EC05A71D942D1600211F62 /* CoreDataModel.swift in Sources */,
 				1072418B1D9175BA00555E07 /* ProjectXC8_09.xcdatamodeld in Sources */,
 				107241851D9175BA00555E07 /* ViewController.swift in Sources */,
 				101F8B3A1D91803400250580 /* DetailedViewController.swift in Sources */,
-				107241981D91762700555E07 /* CoreDataModel.swift in Sources */,
 				1072419A1D91796C00555E07 /* BaseTableViewCell.swift in Sources */,
 				107241831D9175BA00555E07 /* AppDelegate.swift in Sources */,
 			);

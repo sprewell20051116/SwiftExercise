@@ -19,12 +19,13 @@ class CoreDataModel: NSObject {
         self.context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
     }
     
-    func saveObj() {
+    func saveObj(newsObj : News) {
+        
         let newObj : NSManagedObject = NSEntityDescription.insertNewObject(forEntityName: myEntityName, into: self.context);
         
-        newObj.setValue(NSDate(), forKey: "date");
-        newObj.setValue("Detailed!!!!!!", forKey: "detailed");
-        newObj.setValue("Title!!!!!!", forKey: "title");
+        newObj.setValue(newsObj.date!, forKey: "date");
+        newObj.setValue(newsObj.detailed, forKey: "detailed");
+        newObj.setValue(newsObj.title, forKey: "title");
         
         do {
             try self.context.save()
@@ -33,21 +34,25 @@ class CoreDataModel: NSObject {
         }
     }
     
-    func readObj() {
+    func readObj() -> [News] {
         let request:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: myEntityName)
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
         do {
             let results =
-                try self.context.fetch(request) as! [NSManagedObject];
+                try self.context.fetch(request) as! [News];
             
-            print("result count = \(results.count)");
+            return results;
+//
+//            print("result count = \(results.count)");
+//            
+//            for result in results {
+//                print(result);
+//                print(result.value(forKey: "date")!);
+//                print(result.value(forKey: "title")!);
+//            }
+//            
             
-            for result in results {
-                print(result);
-                print(result.value(forKey: "date")!);
-                print(result.value(forKey: "title")!);
-            }
         } catch {
             fatalError("\(error)")
         }

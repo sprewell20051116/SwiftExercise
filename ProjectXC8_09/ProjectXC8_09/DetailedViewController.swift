@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailedViewController: UIViewController {
+    @IBOutlet var textVIew: UITextView!
 
+    @IBOutlet var cancelBtn: UIBarButtonItem!
+    @IBOutlet var doneBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        doneBtn.target = self;
+        cancelBtn.target = self;
+        doneBtn.action = #selector(doneBtnClicked(sender:));
+        cancelBtn.action = #selector(cancelBtnClicked(sender:));
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +30,34 @@ class DetailedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func doneBtnClicked(sender : Any) {
+        print(#function);
+        
+//        var newsObj = News();
+        var context : NSManagedObjectContext  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
 
+        let newsObj = News.init(entity: NSEntityDescription.entity(forEntityName: "News", in:context)!, insertInto: context)
+
+        newsObj.date = NSDate();
+        newsObj.title = "Title \(NSDate())";
+        newsObj.detailed = textVIew.text;
+        
+        do {
+            try context.save()
+        } catch {
+            fatalError("\(error)")
+        }
+
+        
+//        CoreDataModel().saveObj(newsObj: newsObj);
+        self.dismiss(animated: true, completion: nil);
+    }
+    
+    func cancelBtnClicked(sender : Any) {
+        print(#function);
+        self.dismiss(animated: true, completion: nil);
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V4q-cC-SiS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V4q-cC-SiS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -19,21 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TUN-lQ-4cp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TUN-lQ-4cp">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="140" id="d9L-hq-k5q" customClass="BaseTableViewCell" customModule="ProjectXC8_09" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d9L-hq-k5q" id="3be-qQ-N4K">
-                                            <frame key="frameInset" width="375" height="139.5"/>
+                                            <frame key="frameInset" width="375" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novamber 16, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qb-lL-OMB">
-                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GZ-x4-ZQ5">
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -45,17 +40,31 @@
                                                         <constraint firstAttribute="height" constant="80" id="lsq-kS-FgW"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4s2-O0-RTv">
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="Y6M-YQ-xcN"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novamber 16, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qb-lL-OMB">
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7qb-lL-OMB" firstAttribute="leading" secondItem="Csk-mm-BS6" secondAttribute="trailing" constant="8" id="8hL-zz-sPx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4s2-O0-RTv" secondAttribute="trailing" id="LVn-th-Ntb"/>
                                                 <constraint firstItem="7qb-lL-OMB" firstAttribute="trailing" secondItem="3be-qQ-N4K" secondAttribute="trailingMargin" id="Tas-Q2-MuV"/>
                                                 <constraint firstItem="5GZ-x4-ZQ5" firstAttribute="trailing" secondItem="3be-qQ-N4K" secondAttribute="trailingMargin" id="UOb-11-G7d"/>
                                                 <constraint firstItem="Csk-mm-BS6" firstAttribute="top" secondItem="3be-qQ-N4K" secondAttribute="topMargin" id="aSj-nD-JnK"/>
                                                 <constraint firstItem="7qb-lL-OMB" firstAttribute="top" secondItem="3be-qQ-N4K" secondAttribute="topMargin" id="bmG-TZ-fo1"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Csk-mm-BS6" secondAttribute="bottom" priority="750" constant="10" id="dkr-uJ-rU8"/>
+                                                <constraint firstItem="4s2-O0-RTv" firstAttribute="leading" secondItem="7qb-lL-OMB" secondAttribute="leading" id="eFS-Uw-c6p"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="5GZ-x4-ZQ5" secondAttribute="bottom" constant="10" id="fuY-nz-jFe"/>
                                                 <constraint firstItem="5GZ-x4-ZQ5" firstAttribute="leading" secondItem="Csk-mm-BS6" secondAttribute="trailing" constant="8" id="j9b-KL-zx7"/>
                                                 <constraint firstItem="Csk-mm-BS6" firstAttribute="leading" secondItem="3be-qQ-N4K" secondAttribute="leadingMargin" id="nmV-21-S0t"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4s2-O0-RTv" secondAttribute="bottom" id="rlu-KY-YBR"/>
                                                 <constraint firstItem="5GZ-x4-ZQ5" firstAttribute="top" secondItem="7qb-lL-OMB" secondAttribute="bottom" constant="8" id="tRA-Wp-xJV"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -80,9 +89,12 @@
                             <constraint firstItem="TUN-lQ-4cp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ujs-Ul-LnO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Lq2-dL-yEc"/>
+                    <navigationItem key="navigationItem" id="Lq2-dL-yEc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jyo-eV-gfc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="TableView" destination="TUN-lQ-4cp" id="MHq-yn-Pyh"/>
+                        <outlet property="addBtn" destination="Jyo-eV-gfc" id="zQM-V0-JVv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -114,7 +126,7 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N1w-fZ-zts">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -130,6 +142,11 @@
                             <constraint firstItem="N1w-fZ-zts" firstAttribute="top" secondItem="0vM-Hp-JL3" secondAttribute="bottom" id="rVE-wo-q4X"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="GEu-ZT-Lew" id="PZB-bW-hPh"/>
+                        <outlet property="doneBtn" destination="RUl-cz-60d" id="8Cm-bf-2dO"/>
+                        <outlet property="textVIew" destination="N1w-fZ-zts" id="ImG-4F-Vdr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNu-Q4-98n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

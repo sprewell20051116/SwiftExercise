@@ -19,6 +19,19 @@ class CoreDataModel: NSObject {
         self.context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
     }
     
+    
+    func getNewNewsObj() -> News {
+        return News.init(entity: NSEntityDescription.entity(forEntityName: "News", in:context)!, insertInto: context);
+    }
+    
+    func saveAllContext() {
+        do {
+            try self.context.save()
+        } catch {
+            fatalError("\(error)")
+        }
+    }
+    
     func saveObj(newsObj : News) {
         
         let newObj : NSManagedObject = NSEntityDescription.insertNewObject(forEntityName: myEntityName, into: self.context);

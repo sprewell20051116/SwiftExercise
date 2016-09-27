@@ -33,23 +33,14 @@ class DetailedViewController: UIViewController {
     func doneBtnClicked(sender : Any) {
         print(#function);
         
-//        var newsObj = News();
-        var context : NSManagedObjectContext  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
-
-        let newsObj = News.init(entity: NSEntityDescription.entity(forEntityName: "News", in:context)!, insertInto: context)
+        let newsObj = CoreDataModel().getNewNewsObj();
 
         newsObj.date = NSDate();
         newsObj.title = "Title \(NSDate())";
         newsObj.detailed = textVIew.text;
         
-        do {
-            try context.save()
-        } catch {
-            fatalError("\(error)")
-        }
+        CoreDataModel().saveAllContext();
 
-        
-//        CoreDataModel().saveObj(newsObj: newsObj);
         self.dismiss(animated: true, completion: nil);
     }
     

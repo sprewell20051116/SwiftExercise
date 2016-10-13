@@ -14,6 +14,7 @@ class DetailedViewController: UIViewController {
 
     @IBOutlet var cancelBtn: UIBarButtonItem!
     @IBOutlet var doneBtn: UIBarButtonItem!
+    @IBOutlet var keyboardBar: UIToolbar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +23,17 @@ class DetailedViewController: UIViewController {
         doneBtn.action = #selector(doneBtnClicked(sender:));
         cancelBtn.action = #selector(cancelBtnClicked(sender:));
 
+        textViewInit();
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textViewInit() {
+        textVIew.inputAccessoryView = keyboardBar;
     }
     
     func doneBtnClicked(sender : Any) {

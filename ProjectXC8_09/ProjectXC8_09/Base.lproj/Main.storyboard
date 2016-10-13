@@ -126,10 +126,14 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N1w-fZ-zts">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is time label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76G-1T-Pfh">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -138,17 +142,30 @@
                             <constraint firstItem="N1w-fZ-zts" firstAttribute="leading" secondItem="oCm-rK-2Jd" secondAttribute="leading" id="6JQ-lP-LmS"/>
                             <constraint firstItem="0vM-Hp-JL3" firstAttribute="leading" secondItem="oCm-rK-2Jd" secondAttribute="leading" id="7lp-sP-bGq"/>
                             <constraint firstItem="0vM-Hp-JL3" firstAttribute="top" secondItem="oCm-rK-2Jd" secondAttribute="top" id="EJE-Vh-8TK"/>
+                            <constraint firstAttribute="trailing" secondItem="76G-1T-Pfh" secondAttribute="trailing" id="GOT-ga-WPI"/>
+                            <constraint firstItem="76G-1T-Pfh" firstAttribute="leading" secondItem="oCm-rK-2Jd" secondAttribute="leading" id="QP0-fd-YJG"/>
+                            <constraint firstItem="N1w-fZ-zts" firstAttribute="top" secondItem="76G-1T-Pfh" secondAttribute="bottom" constant="8" id="Ynt-Mo-UXR"/>
+                            <constraint firstItem="76G-1T-Pfh" firstAttribute="top" secondItem="0vM-Hp-JL3" secondAttribute="bottom" constant="1" id="aNC-HH-7Aj"/>
                             <constraint firstAttribute="trailing" secondItem="0vM-Hp-JL3" secondAttribute="trailing" id="hbG-pU-nUF"/>
-                            <constraint firstItem="N1w-fZ-zts" firstAttribute="top" secondItem="0vM-Hp-JL3" secondAttribute="bottom" id="rVE-wo-q4X"/>
+                            <constraint firstItem="N1w-fZ-zts" firstAttribute="top" secondItem="0vM-Hp-JL3" secondAttribute="bottom" constant="30" id="rVE-wo-q4X"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cancelBtn" destination="GEu-ZT-Lew" id="PZB-bW-hPh"/>
                         <outlet property="doneBtn" destination="RUl-cz-60d" id="8Cm-bf-2dO"/>
+                        <outlet property="keyboardBar" destination="i8F-Qg-B51" id="Vv0-yY-ePU"/>
                         <outlet property="textVIew" destination="N1w-fZ-zts" id="ImG-4F-Vdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNu-Q4-98n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i8F-Qg-B51">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem systemItem="camera" id="E9n-r6-tdu"/>
+                        <barButtonItem systemItem="action" id="4wX-kG-1mT"/>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="1656.8" y="790.25487256371821"/>
         </scene>

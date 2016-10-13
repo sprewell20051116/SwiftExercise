@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjectXC8_10" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nu2-Q2-foh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="1Zs-tD-ZXB"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Project 10" id="hfa-i2-SUO"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMu-pN-lFM">
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxt-MB-OOO">
+                                <frame key="frameInset" minX="142" minY="416" width="90" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JMO-QB-dWI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aMu-pN-lFM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FSf-Zv-cpx"/>
+                            <constraint firstItem="Nu2-Q2-foh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MSv-cx-D5k"/>
+                            <constraint firstItem="aMu-pN-lFM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b8j-2U-ulf"/>
+                            <constraint firstItem="hxt-MB-OOO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="97.5" id="dGP-QT-Y2l"/>
+                            <constraint firstItem="Nu2-Q2-foh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lbj-r8-7mc"/>
+                            <constraint firstAttribute="trailing" secondItem="Nu2-Q2-foh" secondAttribute="trailing" id="nLo-MV-pgP"/>
+                            <constraint firstItem="hxt-MB-OOO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z5f-AF-OBX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLab" destination="aMu-pN-lFM" id="CE2-db-uW8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250.40000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>

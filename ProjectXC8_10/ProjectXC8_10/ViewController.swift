@@ -48,7 +48,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                 let pm = (placemarks?[0])! as CLPlacemark;
                 print("Country : \(pm.country!)");
                 print("isoCountryCode : \(pm.isoCountryCode!)");
-//                print("areasOfInterest : \(pm.areasOfInterest?)");
                 print("locality : \(pm.locality!)");
                 print("administrativeArea : \(pm.administrativeArea!)");
 //                completion(answer: displayLocaitonInfo(pm))
@@ -61,39 +60,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
 //                completion(answer: "")
             }
         })
-
-        
-        
         
     }
     
-    
-//    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-//        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)-&gt;Void in
-//            if error {
-//                println("Reverse geocoder failed with error" + error.localizedDescription)
-//                return
-//            }
-//            
-//            if placemarks.count &gt; 0 {
-//                let pm = placemarks[0] as CLPlacemark
-//                self.displayLocationInfo(pm)
-//            } else {
-//                println("Problem with the data received from geocoder")
-//            }
-//        })
-//    }
-    
-    
-    func displayLocationInfo(placemark: CLPlacemark) {
-//        if placemark != nil {
-//            //stop updating location to save battery life
-//            locationManager.stopUpdatingLocation()
-//            println(placemark.locality ? placemark.locality : "")
-//            println(placemark.postalCode ? placemark.postalCode : "")
-//            println(placemark.administrativeArea ? placemark.administrativeArea : "")
-//            println(placemark.country ? placemark.country : "")
-//        }
-    }
 }
 

@@ -12,7 +12,15 @@
 		106666FA1DAFE242003754F8 /* ProjectXC8_11.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 106666F81DAFE242003754F8 /* ProjectXC8_11.xcdatamodeld */; };
 		106666FC1DAFE242003754F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106666FB1DAFE242003754F8 /* Assets.xcassets */; };
 		106666FF1DAFE242003754F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106666FD1DAFE242003754F8 /* LaunchScreen.storyboard */; };
-		10F546171DB3590B009A823A /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F546161DB3590B009A823A /* MyCollectionViewController.swift */; };
+		106962FE1DD4C30A005CBEC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106962FD1DD4C30A005CBEC1 /* ViewController.swift */; };
+		106963001DD4C389005CBEC1 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106962FF1DD4C389005CBEC1 /* MyCollectionViewCell.swift */; };
+		106963081DD4C3C5005CBEC1 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 106963011DD4C3C4005CBEC1 /* 01.jpg */; };
+		106963091DD4C3C5005CBEC1 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 106963021DD4C3C4005CBEC1 /* 02.jpg */; };
+		1069630A1DD4C3C5005CBEC1 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 106963031DD4C3C4005CBEC1 /* 03.jpg */; };
+		1069630B1DD4C3C5005CBEC1 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 106963041DD4C3C4005CBEC1 /* 04.jpg */; };
+		1069630C1DD4C3C5005CBEC1 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 106963051DD4C3C4005CBEC1 /* 05.jpg */; };
+		1069630D1DD4C3C5005CBEC1 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 106963061DD4C3C4005CBEC1 /* 06.jpg */; };
+		1069630E1DD4C3C5005CBEC1 /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 106963071DD4C3C4005CBEC1 /* 07.jpg */; };
 		10FB49881DB32271004A366F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB49871DB32271004A366F /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +32,15 @@
 		106666FB1DAFE242003754F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		106666FE1DAFE242003754F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		106667001DAFE242003754F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10F546161DB3590B009A823A /* MyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
+		106962FD1DD4C30A005CBEC1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		106962FF1DD4C389005CBEC1 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		106963011DD4C3C4005CBEC1 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		106963021DD4C3C4005CBEC1 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		106963031DD4C3C4005CBEC1 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		106963041DD4C3C4005CBEC1 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		106963051DD4C3C4005CBEC1 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
+		106963061DD4C3C4005CBEC1 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
+		106963071DD4C3C4005CBEC1 /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
 		10FB49871DB32271004A366F /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,13 +75,21 @@
 			isa = PBXGroup;
 			children = (
 				106666F11DAFE242003754F8 /* AppDelegate.swift */,
-				10F546161DB3590B009A823A /* MyCollectionViewController.swift */,
 				10FB49871DB32271004A366F /* PhotoCell.swift */,
+				106962FD1DD4C30A005CBEC1 /* ViewController.swift */,
 				106666F51DAFE242003754F8 /* Main.storyboard */,
 				106666FB1DAFE242003754F8 /* Assets.xcassets */,
 				106666FD1DAFE242003754F8 /* LaunchScreen.storyboard */,
 				106667001DAFE242003754F8 /* Info.plist */,
 				106666F81DAFE242003754F8 /* ProjectXC8_11.xcdatamodeld */,
+				106962FF1DD4C389005CBEC1 /* MyCollectionViewCell.swift */,
+				106963011DD4C3C4005CBEC1 /* 01.jpg */,
+				106963021DD4C3C4005CBEC1 /* 02.jpg */,
+				106963031DD4C3C4005CBEC1 /* 03.jpg */,
+				106963041DD4C3C4005CBEC1 /* 04.jpg */,
+				106963051DD4C3C4005CBEC1 /* 05.jpg */,
+				106963061DD4C3C4005CBEC1 /* 06.jpg */,
+				106963071DD4C3C4005CBEC1 /* 07.jpg */,
 			);
 			path = ProjectXC8_11;
 			sourceTree = "<group>";
@@ -130,8 +154,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1069630E1DD4C3C5005CBEC1 /* 07.jpg in Resources */,
+				1069630A1DD4C3C5005CBEC1 /* 03.jpg in Resources */,
+				106963091DD4C3C5005CBEC1 /* 02.jpg in Resources */,
+				1069630C1DD4C3C5005CBEC1 /* 05.jpg in Resources */,
+				1069630D1DD4C3C5005CBEC1 /* 06.jpg in Resources */,
 				106666FF1DAFE242003754F8 /* LaunchScreen.storyboard in Resources */,
 				106666FC1DAFE242003754F8 /* Assets.xcassets in Resources */,
+				1069630B1DD4C3C5005CBEC1 /* 04.jpg in Resources */,
+				106963081DD4C3C5005CBEC1 /* 01.jpg in Resources */,
 				106666F71DAFE242003754F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,8 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				10FB49881DB32271004A366F /* PhotoCell.swift in Sources */,
+				106963001DD4C389005CBEC1 /* MyCollectionViewCell.swift in Sources */,
 				106666FA1DAFE242003754F8 /* ProjectXC8_11.xcdatamodeld in Sources */,
-				10F546171DB3590B009A823A /* MyCollectionViewController.swift in Sources */,
+				106962FE1DD4C30A005CBEC1 /* ViewController.swift in Sources */,
 				106666F21DAFE242003754F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

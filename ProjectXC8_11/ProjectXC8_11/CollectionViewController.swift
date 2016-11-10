@@ -1,27 +1,57 @@
 //
-//  MyCollectionViewController.swift
+//  CollectionViewController.swift
 //  ProjectXC8_11
 //
-//  Created by GIGIGUN on 16/10/2016.
+//  Created by GIGIGUN on 08/11/2016.
 //  Copyright © 2016 GIGIGUN. All rights reserved.
 //
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "Cell"
 
-class MyCollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController {
 
+    
+    var fullScreenSize :CGSize! = UIScreen.main.bounds.size
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        
+        // 建立 UICollectionViewFlowLayout
+        let layout = UICollectionViewFlowLayout()
+        
+        // 設置 section 的間距 四個數值分別代表 上、左、下、右 的間距
+        layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+        
+        // 設置每一行的間距
+        layout.minimumLineSpacing = 5
+        
+        // 設置每個 cell 的尺寸
+        layout.itemSize = CGSize(width: CGFloat(fullScreenSize.width)/3 - 10.0, height: CGFloat(fullScreenSize.width)/3 - 10.0)
+        
+        // 設置 header 及 footer 的尺寸
+        layout.headerReferenceSize = CGSize(width: fullScreenSize.width, height: 40)
+        layout.footerReferenceSize = CGSize(width: fullScreenSize.width, height: 40)
+        
+        // 建立 UICollectionView
+        let myCollectionView = UICollectionView(frame: CGRect(x: 0, y: 20, width: fullScreenSize.width, height: fullScreenSize.height - 20), collectionViewLayout: layout)
+        
+        // 註冊 cell 以供後續重複使用
+        myCollectionView.register(MyCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        
+        // 註冊 section 的 header 跟 footer 以供後續重複使用
+        myCollectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "Header")
+        myCollectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "Footer")
+        
+        // 設置委任對象
+        myCollectionView.delegate = self
+        myCollectionView.dataSource = self
+        
+        // 加入畫面中
+        self.view.addSubview(myCollectionView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,18 +73,18 @@ class MyCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("numberOfItemsInSection");
-        return 1
+        // #warning Incomplete implementation, return the number of items
+        return 10
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = UIColor.red;
+        cell.backgroundColor = UIColor.blue;
         // Configure the cell
     
         return cell
